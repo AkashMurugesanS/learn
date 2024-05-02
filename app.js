@@ -11,6 +11,8 @@ require("dotenv").config();
 
 //Routes start
 const studentRoute = require("./routes/studentRoute.js");
+const homeRoute = require("./routes/homeRoute.js");
+
 // Routes end
 
 dbConnect.conn;
@@ -55,6 +57,9 @@ app.set("view engine", "ejs");
 // googlePassport(passport);
 // start
 app.use("/api/student", studentRoute);
+app.use("/api/home", homeRoute);
+
+
 
 // end
 
